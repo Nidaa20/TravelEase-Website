@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -6,19 +7,22 @@ body {
   color: #333;
   height: 100%;
 }
+
 h2 {
   font-size: 28px;
   color: #222;
 }
+
 section {
   max-width: 1100px;
-  margin:auto;
+  margin: auto;
 }
+
 a, button, .card {
   transition: all 0.3s ease;
 }
 
-
+/* Header */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -29,6 +33,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -38,11 +43,11 @@ header {
 }
 
 nav ul {
-  list-style:none;
+  list-style: none;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap; /* Ensure nav wraps on small screens */
 }
-
 
 nav a {
   text-decoration: none;
@@ -53,24 +58,25 @@ nav a {
 }
 
 nav a:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 nav a.btn {
   background: rgba(111, 32, 133, 0.932);
-  color:#e0bf52;
+  color: #e0bf52;
   padding: 8px 18px;
   border-radius: 25px;
 }
 
 nav a.btn:hover {
-  background:rgba(196, 63, 233, 0.932);
+  background: rgba(196, 63, 233, 0.932);
   text-decoration: none;
 }
 
-.hero{
+/* Hero Section */
+.hero {
   background-image: url('./img/background.jpg');
-  background-size: 100% 100%;
+  background-size: cover; /* Changed to cover for responsive scaling */
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -81,7 +87,7 @@ nav a.btn:hover {
   justify-content: center;
   overflow: hidden;
 }
-/* overlay */
+
 .hero-text {
   background: rgba(0, 0, 0, 0.5);
   padding: 40px;
@@ -97,21 +103,20 @@ nav a.btn:hover {
   color: white;
 }
 
-
 .hero p {
   font-size: 15px;
   margin-bottom: 20px;
   font-family: sans-serif;
-   color: white;
+  color: white;
 }
 
 .hero-btn {
   background: rgb(62, 17, 75);
-  color:#e0bf52;
+  color: #e0bf52;
   padding: 12px 25px;
   border-radius: 25px;
   text-decoration: none;
-  transition: 0.3;
+  transition: 0.3s;
   font-family: sans-serif;
 }
 
@@ -119,6 +124,7 @@ nav a.btn:hover {
   background: rgba(111, 32, 133, 0.932);
 }
 
+/* Destinations */
 .destinations {
   text-align: center;
   padding: 60px 40px;
@@ -147,10 +153,11 @@ nav a.btn:hover {
 }
 
 .card:hover {
-  transform: translateY(-8px);/*-means up & + means down translately means move vertically*/
+  transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* Features */
 .features {
   text-align: center;
   padding: 60px;
@@ -160,17 +167,18 @@ nav a.btn:hover {
   display: flex;
   gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;/*responsive & mob friendly*/
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
 .feature-box div {
-  background:#e9ce76;
+  background: #e9ce76;
   padding: 25px;
   border-radius: 15px;
   width: 250px;
 }
 
+/* Testimonials */
 .testimonials {
   background: #fdfdfd;
   text-align: center;
@@ -193,6 +201,7 @@ nav a.btn:hover {
   font-style: italic;
 }
 
+/* Footer */
 footer {
   background: rgb(62, 17, 75);
   color: #e0bf52;
@@ -200,15 +209,100 @@ footer {
   padding: 15px 0;
 }
 
+/* ------------------- Media Queries ------------------- */
 
+/* Mobile Devices */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+  .hero-text {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .card img {
+    height: 150px;
+  }
+  .feature-box div, .testimonial {
+    width: 90%;
+    padding: 20px;
+  }
+  .features, .destinations, .testimonials {
+    padding: 40px 20px;
+  }
+}
 
-
+/* Small Tablets */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    flex-wrap: wrap;
+    padding: 20px 40px;
   }
-  .feature-box, .testimonial-container {
-    flex-direction: column;
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .hero-text {
+    padding: 30px;
+    max-width: 80%;
+  }
+  .hero-btn {
+    padding: 10px 22px;
+    font-size: 15px;
+  }
+  .card img {
+    height: 180px;
+  }
+  .feature-box div, .testimonial {
+    width: 45%;
+  }
+  .features, .destinations, .testimonials {
+    padding: 50px 30px;
+  }
+}
+
+/* Large Tablets / Small Desktops */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 50px;
+  }
+  .hero h1 {
+    font-size: 42px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .hero-text {
+    max-width: 550px;
+  }
+  .card img {
+    height: 200px;
+  }
+  .feature-box div, .testimonial {
+    width: 40%;
   }
 }
