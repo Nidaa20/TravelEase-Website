@@ -1,0 +1,182 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: rgb(62, 17, 75);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e0bf52;
+}
+
+nav ul {
+  list-style:none;
+  display: flex;
+  gap: 25px;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #e0bf52;
+  font-weight: 500;
+  font-size: medium;
+  font-family: sans-serif;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+nav a.btn {
+  background: rgba(111, 32, 133, 0.932);
+  color:#e0bf52;
+  padding: 8px 18px;
+  border-radius: 25px;
+}
+
+nav a.btn:hover {
+  background:rgba(196, 63, 233, 0.932);
+  text-decoration: none;
+}
+
+
+.contact-section {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+}
+.contact-section p {
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.contact-box {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.493);
+    text-align: left;
+}
+
+.contact-box label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.contact-box input,
+.contact-box select,
+.contact-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-box textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #e0bf52;
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #eed277;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.8;
+  color: #333;
+}
+h2 {
+  font-size: 28px;
+  color: #222;
+}
+section {
+  max-width: 1100px;
+  margin: auto;
+}
+a, button, .card {
+  transition: all 0.3s ease;
+}
+
+
+footer {
+  background: rgb(62, 17, 75);
+  color: #e0bf52;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+         flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+    .contact-section p {
+        font-size: 15px;
+    }
+
+    .contact-box {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .contact-box input,
+    .contact-box select,
+    .contact-box textarea {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+ header {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .feature-box, .testimonial-container {
+    flex-direction: column;
+  }
+}

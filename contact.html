@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Travel Website</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+ <!--S1-->
+ <header>
+  <div class="logo">TravelEase</div>
+  <nav>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="destination.html">Destinations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn">Book Now</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!--S2-->
+  <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Fill out the form below to plan your next trip with us!</p>
+
+      <div class="contact-box">
+          <form action="#" method="post">
+              
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+              <label for="destination">Travel Destination</label>
+              <select id="destination" name="destination" required>
+                  <option value="">-- Choose a destination --</option>
+                  <option value="paris">Paris</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="newyork">New York</option>
+                  <option value="tokyo">Tokyo</option>
+                  <option value="bali">Bali</option>
+                  <option value="switzerland">Switzerland</option>
+              </select>
+
+              <label for="date">Preferred Travel Date</label>
+              <input type="date" id="date" name="date" required>
+
+              <label for="feedback">Your Feedback</label>
+              <textarea id="feedback" name="feedback" rows="4" placeholder="Write your message here..."></textarea>
+
+              <button type="submit" class="submit-btn">Submit</button>
+          </form>
+      </div>
+  </section>
+
+ <footer>
+  <p>© 2025 TravelEase | All Rights Reserved</p>
+</footer>
+</body>
+</html>
